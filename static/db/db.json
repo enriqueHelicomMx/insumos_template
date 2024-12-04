@@ -1,0 +1,16 @@
+[
+ {
+   "id": "it0001",
+   "name": "regulador",
+   "path_img":{
+      "main":"img/001/001.jpg"
+    }
+  },
+  {
+    "id":"it0002",
+    "name":"archivo",
+    "path_img":{
+      "main":"img/001/001.jpg"
+    }
+  }
+]

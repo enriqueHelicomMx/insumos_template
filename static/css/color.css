@@ -1,0 +1,18 @@
+:root{
+    --primary-color:#074173;
+    --secondary-color:#c40913;
+    --grey-color:#dddddd;
+    --green-color:#24d064;
+    --third-color:#ffff;
+    --title-color:#F5F7F8;
+    --bg-navbar-middle:rgba(255, 255, 255, 0.6);
+    --bg-gradient: linear-gradient(90deg, rgba(3, 23, 62, 1) 0%, rgba(35, 83, 158, 1) 50%, rgba(148, 28, 53, 1) 100%);
+    --bg-theme:#FFFF;
+    /** Font Sizes*/
+    --font-size-h1: 4em;
+    --font-size-h2: 3em;
+    --font-size-body: 2.05em;
+    --font-size-small: 1.5em;
+    --font-size-label: 1.75em;
+
+}
