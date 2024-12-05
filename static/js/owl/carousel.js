@@ -7,6 +7,7 @@ $("document").ready(function($){
 
     topProducts.owlCarousel({
         items: 1,
+        margin:0,
         loop: true,
         nav: false,
         dots: false,

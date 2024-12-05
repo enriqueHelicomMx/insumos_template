@@ -1,18 +1,14 @@
 :root{
-    --primary-color:#074173;
-    --secondary-color:#c40913;
-    --grey-color:#dddddd;
-    --green-color:#24d064;
-    --third-color:#ffff;
-    --title-color:#F5F7F8;
-    --bg-navbar-middle:rgba(255, 255, 255, 0.6);
+    --bg-cardinal: #BE3841;
+    --bg-indigo_dye: #074173;
+    --bg-prussian_blue:#042B4D;
+    --bg-malachite:#2cd468;
+    --hover-dark_pastel-green:#26BA5A;
+    --bg-seasalt:#fafafa;
+    --bg-persian_red:#C6463D;
     --bg-gradient: linear-gradient(90deg, rgba(3, 23, 62, 1) 0%, rgba(35, 83, 158, 1) 50%, rgba(148, 28, 53, 1) 100%);
-    --bg-theme:#FFFF;
-    /** Font Sizes*/
-    --font-size-h1: 4em;
-    --font-size-h2: 3em;
-    --font-size-body: 2.05em;
-    --font-size-small: 1.5em;
-    --font-size-label: 1.75em;
 
+    --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+    --padding-general: 0 5rem;
 }
