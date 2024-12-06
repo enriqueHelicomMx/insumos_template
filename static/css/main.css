@@ -18,58 +18,116 @@
    * #Reset CSS
 */
 
-* {
+/* 1. Resetando todo el margen, padding y bordes */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
-  font-family: Roboto;
   box-sizing: border-box;
-  transition: all 0.2s linear;
-  text-decoration: none;
 }
 
+/* 2. Definiendo un tamaño de fuente base para toda la página */
 html {
-  font-size: 100%;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+  font-size: 100%; /* 16px si el tamaño base es 16px */
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%; /* Evita que el navegador ajuste el tamaño de texto por defecto */
 }
 
+/* 3. Establecer una fuente base global */
 body {
-  overflow-x: hidden;
-  background: var(--bg-theme);
-  font-size: 1em;
-  line-height: 1.6;
+  font-family: sans-serif;
+  color: #333; /* Color base de texto */
+  background-color: #fff; /* Fondo blanco predeterminado */
 }
 
-h1 {
-  font-size: 2em; /* 32px en tamaño base */
-}
-
-h2 {
-  font-size: 1.75em; /* 28px en tamaño base */
-}
-
-p {
-  font-size: 0.875em; /* 16px en tamaño base */
-}
-
-small {
-  font-size: 0.875em; /* 14px en tamaño base */
-}
-
-img {
-  width: 100%;
-}
-
+/* 4. Eliminar las viñetas y los márgenes en listas */
 ul,
-li {
+ol {
   list-style: none;
+  padding-left: 0;
 }
 
-section {
-  width: 100%;
-  padding: var(--padding-general);
-  margin: 0 auto;
+/* 5. Eliminar los bordes por defecto en los enlaces */
+a {
+  text-decoration: none;
+  color: inherit; /* Hereda el color del elemento contenedor */
 }
+
+/* 6. Eliminar los bordes por defecto de los botones y elementos interactivos */
+button,
+input,
+textarea,
+select {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+/* 7. Eliminar márgenes en los elementos de encabezado */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+/* 8. Imágenes deben ajustarse correctamente */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 9. Controlar la visibilidad de los formularios */
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* 10. Ajuste básico para tablas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+th, td {
+  padding: 0;
+  text-align: left;
+}
+
+/* 11. Asegurar que los elementos vacíos no ocupen espacio */
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+}
+
+/* 12. Evitar que los elementos de bloque generen espacios innecesarios */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 13. Eliminar el espaciado por defecto en los elementos de formulario */
+textarea {
+  resize: vertical; /* Permite solo redimensionar en vertical */
+}
+
+/* 14. Eliminar el espacio innecesario en el footer y en el header */
+header, footer {
+  padding: 0;
+  margin: 0;
+}
+
+/* 15. Mejorar la accesibilidad con un enfoque en enlaces */
+a:focus {
+  outline: 2px dashed #005fcc; /* Contorno visible cuando se hace foco en un enlace */
+  outline-offset: 2px;
+}
+
 
 /**
  *  #Buttoms themes
@@ -113,17 +171,19 @@ section {
 }
 
 .main-header .nav-top {
-  position: relative;
-  z-index: 11;
-  padding: 0 4rem;
+  height: 60px;
+  width: 100%;
   background-color: var(--bg-indigo_dye);
+  position: relative;
+  z-index: 10;
 }
 
 .nav-top .container-box {
   display: flex;
+  height: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 0;
+  padding: 0 5rem;
 }
 
 .container-box .container-box_logo {
@@ -146,7 +206,8 @@ section {
 }
 
 .container-box .container-box_info-details .info-item a i {
-  margin-right: 0.875em;
+  margin-right: .5rem;
+  font-size: 1.375em;
 }
 
 /** #navbar middle */
@@ -155,7 +216,7 @@ section {
   position: relative;
   z-index: 999;
   width: 100%;
-  padding: 0 4rem;
+  padding: 0 2rem;
   height: auto;
   transition: all 0.7s linear;
 }
@@ -230,19 +291,20 @@ section {
 .home {
   position: relative;
   width: 100%;
-  height: 75vh;
+  padding-top: 56.25%;
   padding: 0;
+  top: -80px;
 }
 
 .home__slide-item {
   width: 100%;
-  height: 75vh;
+  height: 100%;
 }
 
-.home-carousel .home__slide-item .home__slide-image {
+.home__slide-image {
   width: 100%;
-  height: 100vh;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
 }
 
 .home__logo {
@@ -267,14 +329,14 @@ section {
   width: 100%;
   padding: 0.5rem 2rem;
   position: relative;
-  top: -250px;
+  bottom: 120px;
   z-index: 99;
 }
 
 /* Contenedor del carrusel */
 .article-carousel__container {
   position: relative;
-  padding: 4rem 0 0; /* Espacio superior e inferior */
+  padding: 4rem 0 0;
   overflow: hidden;
   max-width: 1400px;
   margin: 0 auto;
@@ -330,7 +392,7 @@ section {
  */
 .section-about {
   padding: 0 5rem;
-  margin-top: 15rem;
+
 }
 
 .section-about__container {
@@ -396,7 +458,7 @@ section {
  */
 .better-option {
   background: var(--bg-indigo_dye);
-  height: 210px;
+  max-height: 220px;
   margin-top: 10rem;
   padding: 2rem 0rem;
 }
@@ -695,30 +757,33 @@ section {
  *
  */
 
-.backgroung__page {
+.background-page {
   position: relative;
-  top: 0;
-  left: 0;
   z-index: 1;
-  top: -120px;
-  width: 100vw;
-  height: 40vh;
-  background-image: url("../img/banners/desktop/banner_home.webp");
+  top: -80px;
+  width: 100%;
+  height: 180px;
+  background-image: url("../img/banners/slide_home/slide_1.jpg");
   background-position: center;
   background-size: cover;
 }
 
-.backgroung__page h1 {
+.background-page__title{
+  display: block;
   position: relative;
-  top: 50%;
-  color: var(--title-color);
+  top: 100px;
+  margin-left: 50px;
+  color: var(--bg-seasalt);
+  font-size: 1.8em;
+  font-weight: 600;
 }
 
 /*** #Products */
 .products {
   display: flex;
-  justify-content: space-around;
-  width: 100%;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .products .article {
@@ -737,7 +802,7 @@ section {
 }
 
 .products .sidebar .filter__group h1 {
-  color: var(--primary-color);
+  color: var(--bg-indigo_dye);
 }
 
 .products .sidebar .filter__group .filters ul li {
@@ -745,9 +810,9 @@ section {
 }
 
 .products .sidebar .filter__group .filters ul li a {
-  font-size: var(--font-size-label);
-  color: var(--primary-color);
-  font-weight: 500;
+  font-size: 0.875em;
+  color: var(--bg-indigo_dye);
+  font-weight: 600;
 }
 
 .products .sidebar .filter__group:nth-child(2) .filters ul li a {
@@ -758,7 +823,7 @@ section {
 }
 
 .products .sidebar .filter__group .filters ul li:hover a {
-  color: var(--secondary-color);
+  color: var(--bg-cardinal);
 }
 
 .products .article {
@@ -771,29 +836,32 @@ section {
 }
 
 .article .shop-block .shop-block__header h3 {
-  font-size: var(--font-size-label);
+  font-size: .875em;
+  font-weight: 600;
 }
 
 .article .shop-block .shop-block__header h3 > span {
-  color: var(--secondary-color);
+  color: var(--bg-cardinal);
+  font-size: 1.2em;
 }
 
 .article .shop-block .shop-block__cards {
   display: flex;
+  gap: 2rem;
   flex-wrap: wrap;
-  width: 100%;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
 }
 
 .shop-block .shop-block__cards .shop-block__card-item {
-  width: 25.5rem;
+  width: 240px;
+  height: 320px;
   display: flex;
-  margin: 1rem 1.5rem;
-  justify-content: center;
   align-items: center;
   flex-flow: column;
-  background: var(--grey-color);
   border-radius: 0.5rem;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: var(--shadow);
 }
 
 .shop-block .shop-block__cards .shop-block__card-item .img__product {
@@ -801,8 +869,8 @@ section {
 }
 
 .shop-block .shop-block__cards .shop-block__card-item .content p {
-  font-size: var(--font-size-label);
-  color: var(--primary-color);
+  font-size: 1.2em;
+  color: var(--bg-indigo_dye);
 }
 
 /** pagination */
@@ -815,9 +883,7 @@ section {
 
 .pagination > li {
   width: 5rem;
-  height: 5rem;
   background: transparent;
-  color: #333333;
 }
 
 .pagination > li:first-child,
@@ -835,7 +901,7 @@ section {
 .pagination > li > span,
 .pagination > li > a {
   border-radius: 0.5rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 900;
   height: 100%;
   display: block;
@@ -853,8 +919,8 @@ section {
 .pagination > li > span {
   line-height: 48px;
   cursor: pointer;
-  color: var(--title-color);
-  background-color: var(--secondary-color);
+  color: var(--bg-cardinal);
+  background-color: var(--bg-indigo_dye);
   border: none;
 }
 
@@ -871,7 +937,7 @@ section {
 }
 
 .pagination > li.active > a {
-  color: var(--secondary-color);
+  color: var(--bg-cardinal);
 }
 
 /**! Product Details */
@@ -883,40 +949,40 @@ section {
 
 .product-details .product-item {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin:  0 auto;
 }
 
 .product-item .single-product .big-image {
-  width: 45rem;
-  height: 40rem;
+  width:460px;
+  height: 420px;
   border-radius: 0.5rem;
   overflow: hidden;
   padding: 2.4rem 2.5rem;
-  background: var(--grey-color);
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  border: solid 1px gray;
 }
 
 .product-item .single-product .big-image img {
   width: 100%;
+  height: 100%;
+  
 }
 
 .product-item .single-product .thumbnail-set {
   width: 100%;
-  height: 15rem;
+  height: fit-content;
   display: flex;
   justify-content: space-around;
   align-items: center;
+
 }
 
 .product-item .single-product .thumbnail-set img {
-  width: 10rem;
-  height: 10rem;
+  width: 120px;
+  height: 120px;
   border-radius: 0.5rem;
-  background: var(--grey-color);
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  border: solid 1px gray;
-  padding: 0.2rem 0.5rem;
+  box-shadow: var(--shadow);
 }
 
 .product-item .description {
@@ -926,11 +992,12 @@ section {
 
 .product-item .description h1 {
   font-weight: 600;
-  color: var(--primary-color);
+  color: var(--bg-indigo_dye);
 }
 
 .product-item .description .text {
-  font-size: var(--font-size-label);
+  font-size: 1.2em;
+  font-weight: 500;
 }
 
 .product-item .description .count-add {
@@ -941,9 +1008,9 @@ section {
 }
 
 .product-item .description .count-add .count-product {
-  height: 5rem;
-  width: 20rem;
-  border: 1px solid var(--secondary-color);
+  height: 60px;
+  width: 280px;
+  border: 1px solid var(--bg-cardinal);
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
@@ -953,7 +1020,7 @@ section {
 
 .product-item .description .count-add .count-product > span {
   display: block;
-  font-size: var(--font-size-label);
+  font-size: 1em;
   font-weight: 700;
   display: flex;
   justify-content: center;
@@ -962,20 +1029,20 @@ section {
 }
 
 .product-item .description .count-add button {
-  height: 5rem;
+  height: 50px;
+  width: 160px;
   outline: none;
   box-shadow: none;
-  width: 160px;
   font-weight: 600;
   text-align: center;
-  color: var(--title-color);
+  color: var(--bg-seasalt);
   text-transform: uppercase;
-  background-color: var(--secondary-color);
+  background-color: var(--bg-cardinal);
   border: none;
   transition: all 0.3s ease-in-out;
   border-radius: 4px;
   cursor: pointer;
-  font-size: var(--font-size-label);
+  font-size: 1.2em;
 }
 
 .description .about__product {
@@ -987,7 +1054,7 @@ section {
 .description .about__product tr {
   height: 40px;
   line-height: 40px;
-  font-size: var(--font-size-label);
+  font-size: .875em;
 }
 
 /** Modal Form */
@@ -1015,7 +1082,7 @@ section {
 .modal-form .modal-content {
   width: 35rem;
   height: auto;
-  background: var(--title-color);
+  background: var(--bg-seasalt);
   border-radius: 0.8rem;
   padding: 3rem 2rem;
 }
@@ -1035,9 +1102,9 @@ section {
   width: 20rem;
   height: 3.5rem;
   padding: 0 0.5rem;
-  font-size: var(--font-size-label);
+  font-size: .875em;
   border-radius: 0.5rem;
-  border: solid 1px var(--primary-color);
+  border: solid 1px var(--bg-indigo_dye);
   outline: none;
 }
 
@@ -1051,9 +1118,9 @@ section {
 }
 
 .btn-cancel {
-  border: solid 1px var(--secondary-color);
-  background: #ffe4e4;
-  color: var(--secondary-color);
+  border: solid 1px var(--bg-cardinal);
+  background: var(--bg-cardinal);
+  color: var(--bg-seasalt);
 }
 
 .modal-content form .row .control .product {

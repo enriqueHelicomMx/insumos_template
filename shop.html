@@ -24,77 +24,92 @@
 </head>
 
 <body>
- <!-- header start -->
- <header class="main-header">
-    <div id="navbarTop" class="nav-top">
-        <div class="container-box">
-            <div class="container-box_logo">
-                <img src="./static/img/logo_colorfull.webp" alt="">
-            </div>
-            <div class="container-box_info-details">
-                <div class="info-item">
-                    <a href="#">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
-                        55 4140 6727
-                    </a>
-                </div>
 
-                <div class="info-item">
-                    <a href="#">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        Hipódromo No.12 Col. San Miguel
-                    </a>
+       <!-- header start -->
+       <header class="main-header">
+        <div id="navbarTop" class="nav-top">
+            <div class="container-box">
+                <div class="container-box_logo">
+                    <img
+                        width="120"
+                        height="48"
+                        src="./static/img/logos/logo_white,w_1400.webp"
+                        srcset="
+                        ./static/img/logos/logo_white,w_480.webp 480w,
+                        ./static/img/logos/logo_white,w_1400.webp 1400w"
+                        alt="insumos térmicos">
                 </div>
+                <div class="container-box_info-details">
+                    <div class="info-item">
+                        <a href="#">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            55 4140 6727
+                        </a>
+                    </div>
 
-                <div class="info-item">
-                    <a href="#">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                        ventas@insumostermicos.com
-                    </a>
-                    
+                    <div class="info-item">
+                        <a href="#">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            55 4393 9468
+                        </a>
+                    </div>
+    
+                    <div class="info-item">
+                        <a href="#">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            Hipódromo No.12 Col. San Miguel
+                        </a>
+                    </div>
+    
+                    <div class="info-item">
+                        <a href="#">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            ventas@insumostermicos.com
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div id="navbarMiddle" class="nav-middle header-middle_white-transparent">
-        <div class="container-box">
+        <div id="navbarMiddle" class="nav-middle header-middle_white-transparent">
+            <div class="container-box">
 
-            <div class="navbar">
-                <ul class="navbar__menu">
-                    <li class="navbar__menu-item">
-                        <a href="./index.html" class="navbar__menu-link">Inicio</a>
-                    </li>
-                    <li class="navbar__menu-item">
-                        <a href="#about" class="navbar__menu-link">Nosotros</a>
-                    </li>
-                    <li class="navbar__menu-item">
-                        <a href="./shop.html" class="navbar__menu-link">Productos</a>
-                    </li>
-                    <li class="navbar__menu-item">
-                        <a href="#services" class="navbar__menu-link">Servicios</a>
-                    </li>
-                    <li class="navbar__menu-item">
-                        <a href="#contact" class="navbar__menu-link">Contacto</a>
-                    </li>
+                <div class="navbar">
+                    <ul class="navbar__menu">
+                        <li class="navbar__menu-item">
+                            <a href="./index.html" class="navbar__menu-link">Inicio</a>
+                        </li>
+                        <li class="navbar__menu-item">
+                            <a href="#about" class="navbar__menu-link">Nosotros</a>
+                        </li>
+                        <li class="navbar__menu-item">
+                            <a href="./shop.html" class="navbar__menu-link">Productos</a>
+                        </li>
+                        <li class="navbar__menu-item">
+                            <a href="#services" class="navbar__menu-link">Servicios</a>
+                        </li>
+                        <li class="navbar__menu-item">
+                            <a href="#contact" class="navbar__menu-link">Contacto</a>
+                        </li>
 
-                    <li class="navbar__menu-item">
-                            <a class="btn-green btn-whs" id="btn-wh" data-type="normal">
-                                <i class="fa fa-whatsapp"></i> Cotiza Gratis
-                            </a>
-                    </li>
-                </ul>
+                        <li class="navbar__menu-item">
+                                <a class="btn-whats" id="btn-wh" data-type="normal">
+                                    <i class="fa fa-whatsapp"></i> Cotiza Gratis
+                                </a>
+                        </li>
+                    </ul>
 
-                <i class="fa fa-bars menu_burguer"></i>
+                    <i class="fa fa-bars menu_burguer"></i>
+                </div>
+
             </div>
-
         </div>
-    </div>
-</header>
-<!-- header ends -->
+    </header>
+    <!-- header ends -->
 
-    <section class="backgroung__page">
-        <h1 class="title-sz title_show">Productos</h1>
+    <section class="background-page">
+        <h3 class="background-page__title">Nuestros productos</h3>
     </section>
+    
 
     <section class="products">
         <div class="sidebar">
@@ -129,14 +144,16 @@
             </div>
 
         </div>
+
         <div class="article">
            <div class="shop-block">
 
             <div class="shop-block__header">
-                <h3><span>1 - 9</span> de <span>116</span></h3>
+                <h3><span>1 - 9</span> / <span>116</span></h3>
             </div>
 
             <div class="shop-block__cards">
+                
                 <a href="./product.html" class="shop-block__card-item">
                     <div class="img__product">
                         <img src="./static/img/products/cordones y cintas/CORDONES Y CINTAS 1.png" alt="">
@@ -232,51 +249,48 @@
 
     </section>
 
-    <!-- footer start -->
-    <footer class="footer">
-        <div class="footer-top">
-            <div class="item">
-                <h1 class="title-sz">contáctanos</h1>
-                <div class="contact__box">
-                    <div class="item">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-envelope"></i> email@example.com</a></li>
-                            <li><a href="#"><i class="fa fa-phone"></i> 55 5393 9468</a></li>
-                        </ul>
-                    </div>
-                    <div class="item">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-phone"></i> 55 2487 7172</a></li>
-                            <li><a href="#"><i class="fa fa-phone"></i> 55 5393 9468</a></li>
-                            <li><a href="#"><i class="fa fa-phone"></i> 55 5393 9468</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="address">
-                    <a href="#"><i class="fa fa-map-marker"></i> Hipódromo No.12 Col. San Miguel
-                        Xochimanga Atizapán de Zaragoza,
-                        Estado de México. CP 52927</a>
-                </div>
-                <div class="terms">
-                    <a href="#">terminos y condiciones</a>
-                    <a href="#">boletin</a>
-                </div>
-            </div>
-            <div class="item">
+   <!-- footer start -->
+   <footer class="footer">
+    <div class="footer__content">
+        <div class="footer__column">
+            <h3 class="footer__title">Teléfonos de oficina</h3>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="#"><i class="fa fa-phone"></i> 55 2487 7172</a></li>
+                <li class="footer__item"><a href="#"><i class="fa fa-phone"></i> 55 5393 9468</a></li>
+                <li class="footer__item"><a href="#"><i class="fa fa-phone"></i> 55 5393 8884</a></li>
+            </ul>
+        </div>
+        <div class="footer__column">
+            <h3 class="footer__title">Teléfonos de contacto</h3>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="#"><i class="fa fa-phone"></i> 55 2241 5840</a></li>
+                <li class="footer__item"><a href="#"><i class="fa fa-phone"></i> 55 4140 6727</a></li>
+                
+            </ul>
+        </div>
+        <div class="footer__column">
+            <h3 class="footer__title">Correo</h3>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> ventas@insumostermicos.com</a></li>
+            </ul>
+        </div>
+        <div class="footer__column column__map">
+            <ul class="footer__list">
+                <li class="footer__item"><a href="#"><i class="fa fa-map-marker"></i> Hipódromo No.12 Col. San Miguel
+                    Xochimanga Atizapán de Zaragoza,
+                    Estado de México. CP 52927</a></li>
+            </ul>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3759.1742992033646!2d-99.2208986192489!3d19.57703198897406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d21da3dc4b986d%3A0xa93d708c53c54eee!2sAv.%20Hip%C3%B3dromo%2012%2C%20San%20Miguel%20Xochimanga%2C%2052927%20Cdad.%20L%C3%B3pez%20Mateos%2C%20M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1718029249261!5m2!1ses-419!2smx"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <div class="footer__bottom">
 
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3759.1742992033646!2d-99.2208986192489!3d19.57703198897406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d21da3dc4b986d%3A0xa93d708c53c54eee!2sAv.%20Hip%C3%B3dromo%2012%2C%20San%20Miguel%20Xochimanga%2C%2052927%20Cdad.%20L%C3%B3pez%20Mateos%2C%20M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1718029249261!5m2!1ses-419!2smx"
-                    style="border:0;" allowfullscreen="" 
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <h1 class="title_section">Copyright © 2024 DIMARKETING Todos los derechos reservados</h1>
-        </div>
-    </footer>
-    <!-- footer ends -->
+    </div>
+</footer>
+<!-- footer ends -->
 
 
     <!-- jQuery -->

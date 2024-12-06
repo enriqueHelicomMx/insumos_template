@@ -27,12 +27,19 @@
     </head>
 <body>
 
-    <!-- header start -->
-    <header class="main-header">
+     <!-- header start -->
+     <header class="main-header">
         <div id="navbarTop" class="nav-top">
             <div class="container-box">
                 <div class="container-box_logo">
-                    <img src="./static/img/logo_colorfull.webp" alt="">
+                    <img
+                        width="120"
+                        height="48"
+                        src="./static/img/logos/logo_white,w_1400.webp"
+                        srcset="
+                        ./static/img/logos/logo_white,w_480.webp 480w,
+                        ./static/img/logos/logo_white,w_1400.webp 1400w"
+                        alt="insumos térmicos">
                 </div>
                 <div class="container-box_info-details">
                     <div class="info-item">
@@ -44,11 +51,18 @@
 
                     <div class="info-item">
                         <a href="#">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            55 4393 9468
+                        </a>
+                    </div>
+    
+                    <div class="info-item">
+                        <a href="#">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
                             Hipódromo No.12 Col. San Miguel
                         </a>
                     </div>
-
+    
                     <div class="info-item">
                         <a href="#">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -80,7 +94,7 @@
                         </li>
 
                         <li class="navbar__menu-item">
-                                <a class="btn-green btn-whs" id="btn-wh" data-type="normal">
+                                <a class="btn-whats" id="btn-wh" data-type="normal">
                                     <i class="fa fa-whatsapp"></i> Cotiza Gratis
                                 </a>
                         </li>
@@ -138,48 +152,46 @@
         </div>
     </section>
 
-    <!-- footer start -->
-    <footer class="footer">
-        <div class="footer-top">
-            <div class="item">
-                <h1 class="title-sz">contáctanos</h1>
-                <div class="contact__box">
-                    <div class="item">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-envelope"></i> email@example.com</a></li>
-                            <li><a href="#"><i class="fa fa-phone"></i> 55 5393 9468</a></li>
-                        </ul>
-                    </div>
-                    <div class="item">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-phone"></i> 55 2487 7172</a></li>
-                            <li><a href="#"><i class="fa fa-phone"></i> 55 5393 9468</a></li>
-                            <li><a href="#"><i class="fa fa-phone"></i> 55 5393 9468</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="address">
-                    <a href="#"><i class="fa fa-map-marker"></i> Hipódromo No.12 Col. San Miguel
-                        Xochimanga Atizapán de Zaragoza,
-                        Estado de México. CP 52927</a>
-                </div>
-                <div class="terms">
-                    <a href="#">terminos y condiciones</a>
-                    <a href="#">boletin</a>
-                </div>
-            </div>
-            <div class="item">
 
+      <!-- footer start -->
+      <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__column">
+                <h3 class="footer__title">Teléfonos de oficina</h3>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#"><i class="fa fa-phone"></i> 55 2487 7172</a></li>
+                    <li class="footer__item"><a href="#"><i class="fa fa-phone"></i> 55 5393 9468</a></li>
+                    <li class="footer__item"><a href="#"><i class="fa fa-phone"></i> 55 5393 8884</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__title">Teléfonos de contacto</h3>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#"><i class="fa fa-phone"></i> 55 2241 5840</a></li>
+                    <li class="footer__item"><a href="#"><i class="fa fa-phone"></i> 55 4140 6727</a></li>
+                    
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__title">Correo</h3>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> ventas@insumostermicos.com</a></li>
+                </ul>
+            </div>
+            <div class="footer__column column__map">
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#"><i class="fa fa-map-marker"></i> Hipódromo No.12 Col. San Miguel
+                        Xochimanga Atizapán de Zaragoza,
+                        Estado de México. CP 52927</a></li>
+                </ul>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3759.1742992033646!2d-99.2208986192489!3d19.57703198897406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d21da3dc4b986d%3A0xa93d708c53c54eee!2sAv.%20Hip%C3%B3dromo%2012%2C%20San%20Miguel%20Xochimanga%2C%2052927%20Cdad.%20L%C3%B3pez%20Mateos%2C%20M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1718029249261!5m2!1ses-419!2smx"
-                    style="border:0;" allowfullscreen="" 
+                    style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
-        <div class="footer-bottom">
-            <h1 class="title_section">Copyright © 2024 DIMARKETING Todos los derechos reservados</h1>
+        <div class="footer__bottom">
+
         </div>
     </footer>
     <!-- footer ends -->
@@ -236,8 +248,8 @@
                         <div class="control">
                             <button
                                 id="btn-wh"
-                                class="btn btn-green w-100 " data-type="quotation">
-                                <a class="btn-whs">
+                                class="btn" data-type="quotation">
+                                <a>
                                     Cotizar
                                 </a>
                             </button>
